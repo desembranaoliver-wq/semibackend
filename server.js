@@ -13,11 +13,7 @@ const logger = (req, res, next) => {
 };
  
 app.use(logger);
-app.use(cors({
-    origin: 'https://semifrontend-kappa.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type']
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
  
